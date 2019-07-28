@@ -1,0 +1,15 @@
+<div>
+
+    <!-- self.object_list contain the list of objects that the view is operating
+    in this case, post. 
+    -->
+    <!-- '{%' means Django template syntax -->
+    <!-- '{{' means python syntax -->
+    {% for post in object_list %}
+        <p> {{post.title}} </p>
+        <a href="{% url 'post_detail' post.pk %}">
+            <img src = "{{ post.image }}">
+        </a>
+    {% endfor %}
+
+</div>
