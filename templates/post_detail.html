@@ -3,4 +3,18 @@
 <!--
 <img src = "{{object.image}}">
 -->
+
+<!--
 <img src="http://{{ request.META.HTTP_HOST }}/{{object.image}}">
+-->
+
+<!--slash means absolute path-->
+<img src="/{{object.image}}">
+
+
+<div>
+
+    <a href="{% url 'update_post' object.id %}"> Update Post Title</a>
+    <a href="{% url 'delete_post' object.id %}"> Delete Post </a>
+
+</div>
