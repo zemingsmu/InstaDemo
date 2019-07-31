@@ -21,11 +21,12 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse("post_detail", args=[str(self.pk)])
 
+
 class InstaUser(AbstractUser):
     profile_pic = ProcessedImageField(
         upload_to = 'static/images/profiles',
-        format= 'JPEG',
-        options={'quality': 100},
+        format = 'JPEG',
         blank = True,
         null = True,
-    )
+    ) 
+    

@@ -1,3 +1,7 @@
+{% extends 'nav.html' %}
+
+{% block content %}
+
 <p> {{object.title}} </p>
 
 <!--
@@ -18,3 +22,5 @@
     <a href="{% url 'delete_post' object.id %}"> Delete Post </a>
 
 </div>
+
+{% endblock content %}
