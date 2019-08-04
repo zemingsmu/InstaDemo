@@ -1,4 +1,4 @@
-{% extends 'nav.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
 
@@ -19,7 +19,7 @@
     {% for post in object_list %}
         <p> {{post.title}} </p>
         <a href="{% url 'post_detail' post.pk %}">
-            <img src = "{{ post.image }}" width=200 height=200>
+            <img src = "{{ post.image }}" >
         </a>
     {% endfor %}
 
