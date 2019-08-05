@@ -107,5 +107,8 @@ class Like(models.Model):
         related_name='likes'
     )
 
+    class Meta:
+        unique_together = ("post", "user")
+
     def __str__(self):
         return 'Like: ' + self.user.username + ' Likes ' + self.post.title
